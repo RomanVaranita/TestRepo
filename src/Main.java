@@ -7,10 +7,11 @@ public class Main {
   }
   public static Season getSeason(String month) {
     return switch (month.toLowerCase() ) {
-     case "dec", "jan", "feb", -> Season.WINTER;
-     case "mar", "apr", "may", -> Season.SPRING;
-     case "jun", "jul",
-    }
+     case "dec", "jan", "feb" -> Season.WINTER;
+     case "mar", "apr", "may" -> Season.SPRING;
+     case "jun", "jul", "aug" -> Season.SUMMER;
+     case "sep", "oct", "nov" -> Season.FALL;
+    };
   }
 
   public static void main(String[] args) {
