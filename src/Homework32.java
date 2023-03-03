@@ -48,8 +48,16 @@ public class Homework32 {
   public static void main(String[] args) throws IOException  {
     BufferedReader imputReader = new BufferedReader(new InputStreamReader(System.in));
 
-    System.out.println("Enter the minth: ");
+    System.out.println("Enter the month: ");
     String month = imputReader.readLine();
+    Month monthTolook = readMonth(month);
+
+    Map<Month, Integer> monthDays = buildMonthsMap();
+
+    if (monthDays.containsKey(monthTolook)) {
+      System.out.println();
+    }
+
 
   }
 }
